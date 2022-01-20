@@ -1,6 +1,7 @@
 //TA02 PLACEHOLDER
 // Remember, you can make more of these placeholders yourself!
 const express = require('express');
+
 const router = express.Router();
 
 const newUserArray = ['Pepe', 'Lorenzo', 'Camila'];
@@ -20,7 +21,8 @@ router.post('/removeUSer', (req, res, next) => {
     return
   }
   res.redirect('/ta02');
-})
+});
+
 router.get('/', (req, res, next) => {
   res.render('pages', {
     title: 'Team Activity 02',
@@ -29,7 +31,5 @@ router.get('/', (req, res, next) => {
     contentCSS: true, // For HBS
   });
 });
-
-
 
 module.exports = router;
